@@ -128,7 +128,7 @@ export async function processNotification(headers, body) {
 
             let start = new Date(lastDown).getTime();
             let stop = new Date(
-              body.webhook_event_data.request_start_time
+              body.webhook_event_data.request_start_time,
             ).getTime();
             let duration = stop - start;
             const portions = [];
@@ -162,7 +162,7 @@ export async function processNotification(headers, body) {
         default:
           await KV.put(
             body.webhook_event_data.check_name,
-            body.webhook_event_data.request_start_time
+            body.webhook_event_data.request_start_time,
           );
           params.text =
             `<b>#DOWNALERT</b>\n\n` +

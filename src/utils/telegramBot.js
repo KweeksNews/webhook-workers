@@ -15,7 +15,7 @@ export async function telegramBot(method, params) {
     },
     (key, value) => {
       if (value !== null && value !== undefined && value !== '') return value;
-    }
+    },
   );
 
   const fetchPayload = {

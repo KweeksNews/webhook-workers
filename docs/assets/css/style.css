@@ -314,7 +314,7 @@ footer {
   }
   .menu__wrapper .menu a {
     padding: 0.5rem 1.5rem;
-    border-radius: 0.25rem;
+    border-radius: 0.4rem;
     transition: background-color 0.18s cubic-bezier(0.77, 0, 0.175, 1);
   }
   .menu__wrapper .menu a:hover {

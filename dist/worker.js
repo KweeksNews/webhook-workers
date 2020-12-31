@@ -31,7 +31,7 @@
             s,
             function(t) {
               return e[t];
-            }.bind(null, s)
+            }.bind(null, s),
           );
       return a;
     }),
@@ -68,7 +68,7 @@
           },
           (e, t) => {
             if (null != t && '' !== t) return t;
-          }
+          },
         ),
         o = {
           method: 'POST',
@@ -176,7 +176,7 @@
                     let n = new Date(e).getTime(),
                       a =
                         new Date(
-                          t.webhook_event_data.request_start_time
+                          t.webhook_event_data.request_start_time,
                         ).getTime() - n;
                     const s = [],
                       o = 36e5,
@@ -194,7 +194,7 @@
                 default:
                   await KV.put(
                     t.webhook_event_data.check_name,
-                    t.webhook_event_data.request_start_time
+                    t.webhook_event_data.request_start_time,
                   ),
                     (u.text =
                       '<b>#DOWNALERT</b>\n\n<b>Name:</b> ' +
@@ -274,7 +274,7 @@
               o = { parseMode: 'HTML' };
             if (
               !JSON.parse(await KV.get('webmaster-id')).includes(
-                e.message.from.id
+                e.message.from.id,
               )
             )
               throw [200, 'Unauthorised user!'];
@@ -453,7 +453,7 @@
             !(t.conditions && (!Array.isArray(t) || t.conditions.length)) ||
             ('function' == typeof t.conditions
               ? t.conditions(e)
-              : t.conditions.every(t => t(e)))
+              : t.conditions.every(t => t(e))),
         );
       }
     };
@@ -485,7 +485,7 @@
             }
           } else t = await fetch(e);
           return t;
-        })(e.request)
+        })(e.request),
       );
     });
   },

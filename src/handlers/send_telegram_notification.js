@@ -12,7 +12,7 @@ export default async request => {
   try {
     const processedData = await processNotification(
       requestHeaders,
-      requestBody
+      requestBody,
     );
     let params = processedData;
     let responseData = '';

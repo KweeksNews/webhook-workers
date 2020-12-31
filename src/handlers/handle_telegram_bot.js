@@ -12,7 +12,7 @@ export default async request => {
     const processedData = await processBot(requestBody);
 
     const responseData = JSON.stringify(
-      await telegramBot('sendMessage', processedData)
+      await telegramBot('sendMessage', processedData),
     );
 
     const responseBody = JSON.stringify({
