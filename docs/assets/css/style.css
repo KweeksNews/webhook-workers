@@ -197,6 +197,8 @@ header .branding img {
   background-color: var(--primary);
   border-radius: 0.4rem;
   color: var(--body-bg-black);
+  -webkit-transition: color 0.18s ease;
+  -o-transition: color 0.18s ease;
   transition: color 0.18s ease;
   font-weight: 600;
 }
@@ -288,35 +290,45 @@ footer {
   .wrap {
     max-width: 960px;
   }
+
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .menu__wrapper {
     position: static;
     background-color: transparent;
   }
+
   .menu__wrapper .floatmenu {
     display: none;
   }
+
   .menu__wrapper .menu {
     display: block;
     margin-bottom: 0;
     color: var(--text-clr);
   }
+
   .menu__wrapper .menu li {
     display: inline-block;
   }
+
   .menu__wrapper .menu li + li {
     margin-top: 0;
     margin-left: 0.5rem;
   }
+
   .menu__wrapper .menu a {
     padding: 0.5rem 1.5rem;
     border-radius: 0.4rem;
-    transition: background-color 0.18s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
+
   .menu__wrapper .menu a:hover {
     background-color: var(--menu-hover);
     border-radius: 0.4rem;
