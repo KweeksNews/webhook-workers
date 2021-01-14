@@ -42,7 +42,7 @@ export default async request => {
       });
 
       return new Response(responseBody, {
-        status: 500,
+        status: 200,
         headers: responseHeaders,
       });
     }

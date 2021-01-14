@@ -388,7 +388,7 @@
         }
         {
           const t = JSON.stringify({ result: 'Failed', data: e.toString() });
-          return new Response(t, { status: 500, headers: n });
+          return new Response(t, { status: 200, headers: n });
         }
       }
     };
