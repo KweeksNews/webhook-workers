@@ -6,6 +6,7 @@ export async function processNotification(headers, body) {
   const WordPressLogChannel = chatId.wordpress;
   const contentLogChannel = chatId.content;
   const userLogChannel = chatId.user;
+  const serverLogChannel = chatId.server;
   const managementGroup = chatId.management;
   let params = {};
   params.parseMode = 'HTML';
@@ -112,7 +113,7 @@ export async function processNotification(headers, body) {
       }
       break;
     case FreshpingUserAgent:
-      params.chatId = [managementGroup, WordPressLogChannel];
+      params.chatId = [serverLogChannel];
       switch (body.webhook_event_data.http_status_code) {
         case 200:
           const lastDown = await KV.get(body.webhook_event_data.check_name);

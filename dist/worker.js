@@ -93,7 +93,8 @@
             r = a.wordpress,
             i = a.content,
             d = a.user,
-            c = a.management;
+            c = a.server;
+          a.management;
           let u = { parseMode: 'HTML' };
           switch (e.get('user-agent')) {
             case s:
@@ -159,7 +160,7 @@
               break;
             case o:
               switch (
-                ((u.chatId = [c, r]), t.webhook_event_data.http_status_code)
+                ((u.chatId = [c]), t.webhook_event_data.http_status_code)
               ) {
                 case 200:
                   const e = await KV.get(t.webhook_event_data.check_name);
