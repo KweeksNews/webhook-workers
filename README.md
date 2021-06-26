@@ -1,8 +1,8 @@
-# <p align="center"><img width="40%" src="https://webhook.kweeksnews.com/assets/images/kweekshook.svg"></p>
+# <p align="center"><img width="40%" src="https://webhook.kweeksnews.com/assets/img/kweekshook.svg"></p>
 
 ## Introduction
 
-KweeksHook uses the [Cloudflare Workers](https://workers.cloudflare.com/) service to handle webhooks from services on the KweeksNews Network.
+KweeksHook (KweeksNews Webhook Handlers) uses the [Cloudflare Workers](https://workers.cloudflare.com/) service to handle webhooks from services on the KweeksNews Network.
 
 ### License
 
