@@ -10,6 +10,7 @@ module.exports = {
     404: path.resolve(__dirname, 'src/scripts/404.js'),
   },
   output: {
+    filename: 'assets/js/[name].bundle.js',
     publicPath: '/',
     clean: true,
   },
